@@ -255,7 +255,7 @@ aside {
       color: white;
 
       &:hover {
-        color: gray;
+        color: rgb(0, 0, 0);
       }
 
       &:active {
@@ -290,7 +290,7 @@ footer {
       text-decoration: none;
 
       &:hover {
-        color: gray;
+        color: rgb(0, 0, 0);
       }
 
       &:active {

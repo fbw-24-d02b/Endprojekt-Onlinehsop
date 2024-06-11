@@ -22,7 +22,7 @@ header {
   top: 0;
 
   .dropdown ul {
-    display:none;
+    display: none;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(220, 133, 255, 0.37);
     backdrop-filter: blur(4px);
@@ -32,34 +32,31 @@ header {
     margin: 0;
     text-align: center;
     list-style-type: none;
-    position:absolute;
-    right:2rem;
-    top:7rem;
+    position: absolute;
+    right: 2rem;
+    top: 7rem;
 
-    a{
+    a {
       text-decoration: none;
-      
-      &:hover{
-        color:black;
+
+      &:hover {
+        color: black;
       }
 
-      &:active{
+      &:active {
         text-decoration: underline;
       }
     }
-    
   }
 
-  
-
-  &:has([type="checkbox"]:checked) .dropdown ul{
-    display:inline-block;
+  &:has([type="checkbox"]:checked) .dropdown ul {
+    display: inline-block;
   }
 
-  #my-dropdown{
-    display:none;
+  #my-dropdown {
+    display: none;
   }
-  
+
   .nav {
     display: none;
     background: rgba(255, 255, 255, 0.25);
@@ -86,7 +83,6 @@ main {
     width: 20rem;
     margin: auto;
     text-align: center;
-
   }
 
   .products {
@@ -116,26 +112,26 @@ main {
       #heart-checkbox11,
       #heart-checkbox12,
       #heart-checkbox13,
-      #heart-checkbox14{
-        display:none;
+      #heart-checkbox14 {
+        display: none;
       }
 
-      .second-heart{
-        display:none;
+      .second-heart {
+        display: none;
       }
 
-      &:has([type="checkbox"]:checked) .first-heart{
-        display:none;
+      &:has([type="checkbox"]:checked) .first-heart {
+        display: none;
       }
 
-      &:has([type="checkbox"]:checked) .second-heart{
-        display:inline-block;
+      &:has([type="checkbox"]:checked) .second-heart {
+        display: inline-block;
       }
 
-    &:hover{
-      box-shadow: 10px 7px 5px rgba(0, 0, 0, 0.767);
-      outline: 5px solid black;
-    }
+      &:hover {
+        box-shadow: 10px 7px 5px rgba(0, 0, 0, 0.767);
+        outline: 5px solid black;
+      }
 
       .image {
         background-position: center;
@@ -234,6 +230,32 @@ main {
     .image-14 {
       background-image: url(./pics/14.jpg);
     }
+
+    .product-coming-soon{
+      box-shadow: none;
+      
+      &:hover{
+        outline:none;
+        box-shadow: none;
+      }
+    }
+
+    .coming-soon.coming-soon {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap:1rem;
+
+      .coming-soon-circle {
+        font-size: 5rem;
+        animation-name: circle;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    
   }
 }
 aside {
@@ -308,7 +330,7 @@ footer {
       font-size: 3rem;
     }
   }
-  
+
   aside {
     .to-the-top {
       padding: 2rem;
@@ -330,7 +352,7 @@ footer {
 
 @media (min-width: 800px) {
   header {
-   .dropdown {
+    .dropdown {
       display: none;
     }
 
@@ -377,13 +399,22 @@ footer {
   }
 }
 
+@keyframes circle{
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
 
 .visually-hidden {
-  clip: rect(0 0 0 0); 
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
 }

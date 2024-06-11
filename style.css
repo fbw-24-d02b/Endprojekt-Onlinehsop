@@ -103,7 +103,20 @@ main {
       box-shadow: 8px 5px 5px purple;
       overflow: hidden;
 
-      #heart-checkbox{
+      #heart-checkbox,
+      #heart-checkbox2,
+      #heart-checkbox3,
+      #heart-checkbox4,
+      #heart-checkbox5,
+      #heart-checkbox6,
+      #heart-checkbox7,
+      #heart-checkbox8,
+      #heart-checkbox9,
+      #heart-checkbox10,
+      #heart-checkbox11,
+      #heart-checkbox12,
+      #heart-checkbox13,
+      #heart-checkbox14{
         display:none;
       }
 
@@ -116,7 +129,7 @@ main {
       }
 
       &:has([type="checkbox"]:checked) .second-heart{
-        display:inline-block
+        display:inline-block;
       }
 
     &:hover{

@@ -30,11 +30,27 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 0 0 26px 0;
     margin: 0;
+    text-align: center;
     list-style-type: none;
     position:absolute;
     right:2rem;
     top:7rem;
+
+    a{
+      text-decoration: none;
+      
+      &:hover{
+        color:black;
+      }
+
+      &:active{
+        text-decoration: underline;
+      }
+    }
+    
   }
+
+  
 
   &:has([type="checkbox"]:checked) .dropdown ul{
     display:inline-block;
@@ -70,6 +86,7 @@ main {
     width: 20rem;
     margin: auto;
     text-align: center;
+
   }
 
   .products {
@@ -85,6 +102,27 @@ main {
       border-radius: 0.5rem;
       box-shadow: 8px 5px 5px purple;
       overflow: hidden;
+
+      #heart-checkbox{
+        display:none;
+      }
+
+      .second-heart{
+        display:none;
+      }
+
+      &:has([type="checkbox"]:checked) .first-heart{
+        display:none;
+      }
+
+      &:has([type="checkbox"]:checked) .second-heart{
+        display:inline-block
+      }
+
+    &:hover{
+      box-shadow: 10px 7px 5px rgba(0, 0, 0, 0.767);
+      outline: 5px solid black;
+    }
 
       .image {
         background-position: center;
@@ -257,19 +295,7 @@ footer {
       font-size: 3rem;
     }
   }
-  main {
-    .content {
-      width: 50rem;
-      font-size: 2rem;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      justify-items: center;
-      gap: 2rem 0;
-    }
-  }
+  
   aside {
     .to-the-top {
       padding: 2rem;
@@ -312,6 +338,19 @@ footer {
           text-decoration: underline;
         }
       }
+    }
+  }
+  main {
+    .content {
+      width: 50rem;
+      font-size: 2rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      gap: 2rem 0;
     }
   }
 }

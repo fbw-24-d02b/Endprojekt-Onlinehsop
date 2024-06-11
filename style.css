@@ -21,6 +21,16 @@ header {
   position: sticky;
   top: 0;
 
+  ul {
+    display: none;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(236, 158, 255, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1rem;
+  }
+
   a {
     color: white;
   }
@@ -165,10 +175,19 @@ aside {
     font-family: Kanit, sans-serif;
     width: 3rem;
     text-align: center;
+    
 
     a {
       text-decoration: none;
       color: white;
+
+      &:hover{
+        color:gray;
+      }
+
+      &:active{
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -230,11 +249,11 @@ footer {
     }
   }
   aside {
-   .to-the-top{
-    padding:2rem;
-    width:7rem;
-    font-size:1.5rem;
-   }
+    .to-the-top {
+      padding: 2rem;
+      width: 7rem;
+      font-size: 1.5rem;
+    }
   }
 
   footer {
@@ -244,6 +263,42 @@ footer {
     }
     .contact {
       justify-content: space-around;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  header {
+    .bar {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          color: black;
+        }
+
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  header {
+    ul {
+      flex-direction: row;
+      gap: 2rem;
     }
   }
 }

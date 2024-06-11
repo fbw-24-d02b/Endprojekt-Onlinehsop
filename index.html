@@ -13,13 +13,26 @@
 <body>
     <header>
         <h1>Shirt-Shack</h1>
-        <a class="bar" href="#"><i class="fa-solid fa-bars"></i></a>
-        <ul>
+        <div class="dropdown">
+            <input type="checkbox" id="my-dropdown" value="" name="my-dropdown">
+            <label for="my-dropdown" data-toggle="dropdown" title="navigation ein-und ausschalten">
+                <i class="fa-solid fa-bars"></i>
+                <span class="visually-hidden">hier navigation umschalten</span>
+            </label>
+            <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="#">Profil</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </div>
+        <ul class="nav">
             <li><a href="#">News</a></li>
             <li><a href="./contact.html">Contact</a></li>
             <li><a href="#">Profil</a></li>
             <li><a href="#">Cart</a></li>
         </ul>
+        
     </header>
 
     <main>
